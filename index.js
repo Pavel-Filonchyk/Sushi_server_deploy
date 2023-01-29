@@ -18,7 +18,7 @@ app.use('/', router)
 app.use(fileUpload({}))           
 app.use(express.static('static')) 
 
-app.use(filePath(path.resolve(__dirname, 'images/')))    // правильный путь для картинок
+app.use(filePath(path.resolve(__dirname, 'images/')))    // правильный путь для картинок (только для формата)
 
 async function startApp() {
     try {
