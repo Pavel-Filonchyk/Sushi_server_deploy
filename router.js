@@ -25,6 +25,4 @@ router.post('/login', ControllerAuth.login)
 
 router.get('/users', roleMiddleware(['USER']), ControllerAuth.getUsers) 
 
-router.post('/expo', ControllerPostExpo.postExpo)
-
 export default router
