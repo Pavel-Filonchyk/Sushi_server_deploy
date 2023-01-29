@@ -8,7 +8,6 @@ import ControllerCartSushi from './Controllers/ControllerCartSushi.js'
 import ControllerAuth from './Controllers/ControllerAuth.js'
 import authMiddleware from './meddlewares/authMiddleware.js'
 import roleMiddleware from './meddlewares/roleMiddleware.js'
-import ControllerPostExpo from './Controllers/ControllerPostExpo.js'
 
 const router = new Router()
 
