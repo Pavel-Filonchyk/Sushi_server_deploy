@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 import router from './router.js'
 import fileUpload from 'express-fileupload';
 import cors from 'cors'
-import filePathMiddleware from './meddlewares/filePathMiddleware'
+import filePath  from './meddlewares/filePathMiddleware.js'
 import path from 'path'
 
 const PORT = process.env.PORT || 3001
@@ -18,7 +18,7 @@ app.use('/', router)
 app.use(fileUpload({}))           
 app.use(express.static('static')) 
 
-app.use(filePathMiddleware(path.resolve(__dirname, 'images/')))    // правильный путь для картинок
+app.use(filePath(path.resolve(__dirname, 'images/')))    // правильный путь для картинок
 
 async function startApp() {
     try {
