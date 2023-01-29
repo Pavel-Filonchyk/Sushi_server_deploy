@@ -3,8 +3,7 @@ import mongoose from 'mongoose'
 import router from './router.js'
 import fileUpload from 'express-fileupload';
 import cors from 'cors'
-import filePath from './meddlewares/filePathMiddleware.js'
-import path from 'path'
+
 
 const PORT = process.env.PORT || 3001
 const DB_URL = `mongodb+srv://Pavel:Luky@cluster0.rvgopky.mongodb.net/sushi` 
