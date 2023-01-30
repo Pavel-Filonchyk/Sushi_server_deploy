@@ -3,7 +3,8 @@ import User from '../Schemes/User.js'
 import fs from 'fs'
 
 class ControllerCartSushi {                                       
-    async postCart(req, res) {                                                     
+    async postCart(req, res) { 
+        console.log(req.body)                                                    
         fs.writeFileSync('./postCart/postCart.json', JSON.stringify(req.body))
         try {
             const bill = await Invoice.create({ 

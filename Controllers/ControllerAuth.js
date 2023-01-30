@@ -36,7 +36,7 @@ class ControllerAuth {
             
             const userCreate = await User.create({userName, password: hashPassword, roles: [userRole.value]})
             const token = generateAccessToken(userCreate._id, userCreate.roles) 
-                return res.json({token, userName: userName})                                            
+                return res.json({token, userName: userCreate.userName})                                            
         
             } catch (e) {
             console.log(e)
